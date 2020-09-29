@@ -1,15 +1,16 @@
 package com.example.testmad;
 
 public class hotelsModel {
-    String name, address, purl;
+    String name, rate, details, imageUrl;
 
     public hotelsModel() {
     }
 
-    public hotelsModel(String name, String address, String purl) {
+    public hotelsModel(String name, String rate, String details, String imageUrl) {
         this.name = name;
-        this.address = address;
-        this.purl = purl;
+        this.rate = rate;
+        this.details = details;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -20,19 +21,28 @@ public class hotelsModel {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getRate() {
+        return rate;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 
-    public String getPurl() {
-        return purl;
+    public String getDetails() {
+        return details;
     }
 
-    public void setPurl(String purl) {
-        this.purl = purl;
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
+

@@ -41,7 +41,7 @@ public class home1 extends AppCompatActivity implements View.OnClickListener {
                 startActivity(i);
                 break;
             case R.id.c3:
-                i = new Intent(this, hotels.class);
+                i = new Intent(this, AdminHotelActivity.class);
                 startActivity(i);
                 break;
             case R.id.c4:

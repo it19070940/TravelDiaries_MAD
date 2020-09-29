@@ -27,33 +27,36 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class myadapter1 extends FirebaseRecyclerAdapter<hotelsModel, myadapter1.myviewholder> {
-    public myadapter1(@NonNull FirebaseRecyclerOptions<hotelsModel> options) {
+public class myadaapter5 extends FirebaseRecyclerAdapter<hotelsModel, myadaapter5.myviewholder> {
+    public myadaapter5(@NonNull FirebaseRecyclerOptions<hotelsModel> options) {
         super(options);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull final myviewholder holder, final int position, @NonNull final hotelsModel model) {
         holder.name.setText(model.getName());
-        holder.address.setText(model.getAddress());
+        holder.rate.setText(model.getRate());
+       // holder.details.setText(model.getDetails());
 
-        Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
+        Glide.with(holder.img.getContext()).load(model.getImageUrl()).into(holder.img);
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext()).setContentHolder(new ViewHolder(R.layout.dialogcontent))
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext()).setContentHolder(new ViewHolder(R.layout.dialogcontent1))
                         .setExpanded(true, 1100).create();
 
                 View myview = dialogPlus.getHolderView();
-                final EditText purl = myview.findViewById(R.id.uimgurl);
                 final EditText name = myview.findViewById(R.id.uname);
-                final EditText address = myview.findViewById(R.id.uaddress);
+                final EditText rate = myview.findViewById(R.id.urate);
+                final EditText imageUrl = myview.findViewById(R.id.uimgurl);
+
+
                 Button usubmit = myview.findViewById(R.id.usubmit);
 
-                purl.setText(model.getPurl());
+                imageUrl.setText(model.getImageUrl());
                 name.setText(model.getName());
-               address.setText(model.getAddress());
+                rate.setText(model.getRate());
 
                 dialogPlus.show();
 
@@ -61,11 +64,11 @@ public class myadapter1 extends FirebaseRecyclerAdapter<hotelsModel, myadapter1.
                     @Override
                     public void onClick(View view) {
                         Map<String, Object> map = new HashMap<>();
-                        map.put("purl", purl.getText().toString());
+                        map.put("imageUrl", imageUrl.getText().toString());
                         map.put("name", name.getText().toString());
-                        map.put("address", address.getText().toString());
+                        map.put("rate", rate.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("hotels").child(getRef(position).getKey()).updateChildren(map)
+                        FirebaseDatabase.getInstance().getReference().child("uploads").child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
@@ -94,7 +97,7 @@ public class myadapter1 extends FirebaseRecyclerAdapter<hotelsModel, myadapter1.
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("hotels").child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("uploads").child(getRef(position).getKey()).removeValue();
 
                     }
                 });
@@ -117,19 +120,20 @@ public class myadapter1 extends FirebaseRecyclerAdapter<hotelsModel, myadapter1.
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow1, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow, parent, false);
         return new myviewholder(view);
     }
 
     class myviewholder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView name, address;
+        TextView name, rate;
         ImageView Delete, edit;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView) itemView.findViewById(R.id.img2);
             name = (TextView)itemView.findViewById(R.id.hotelName);
-            address= (TextView)itemView.findViewById(R.id.address);
+            rate= (TextView)itemView.findViewById(R.id.rate);
+           // details= (TextView)itemView.findViewById(R.id.details);
             Delete= (ImageView)itemView.findViewById(R.id.Delete);
             edit = (ImageView)itemView.findViewById(R.id.edit);
 
@@ -138,4 +142,3 @@ public class myadapter1 extends FirebaseRecyclerAdapter<hotelsModel, myadapter1.
         }
     }
 }
-

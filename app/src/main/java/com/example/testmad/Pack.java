@@ -1,33 +1,38 @@
 package com.example.testmad;
 
 public class Pack {
-    String imageUrl, tDate, tName, tPackage, tPrice;
+
+    private String tName;
+    private String tDate;
+    private String tPrice;
+    private String tPackage;
+    private String imageUrl;
+    private String key;
+
+    private String mEditTextFileName;
 
     public Pack() {
+
     }
 
-    public Pack(String imageUrl, String tDate, String tName, String tPackage, String tPrice) {
-        this.imageUrl = imageUrl;
-        this.tDate = tDate;
+    public Pack(String key) {
+        this.key = key;
+    }
+
+    public Pack(String tName, String tDate, String tPrice, String tPackage, String imageUrl) {
         this.tName = tName;
-        this.tPackage = tPackage;
+        this.tDate = tDate;
         this.tPrice = tPrice;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
+        this.tPackage = tPackage;
         this.imageUrl = imageUrl;
     }
 
-    public String gettDate() {
-        return tDate;
+    public String getKey() {
+        return key;
     }
 
-    public void settDate(String tDate) {
-        this.tDate = tDate;
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String gettName() {
@@ -38,12 +43,12 @@ public class Pack {
         this.tName = tName;
     }
 
-    public String gettPackage() {
-        return tPackage;
+    public String gettDate() {
+        return tDate;
     }
 
-    public void settPackage(String tPackage) {
-        this.tPackage = tPackage;
+    public void settDate(String tDate) {
+        this.tDate = tDate;
     }
 
     public String gettPrice() {
@@ -53,4 +58,22 @@ public class Pack {
     public void settPrice(String tPrice) {
         this.tPrice = tPrice;
     }
+
+    public String gettPackage() {
+        return tPackage;
+    }
+
+    public void settPackage(String tPackage) {
+        this.tPackage = tPackage;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+
 }

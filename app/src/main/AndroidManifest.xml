@@ -3,6 +3,7 @@
     package="com.example.testmad">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,11 +24,19 @@
         <activity android:name=".adddata" />
         <activity android:name=".logout" />
         <activity android:name=".promos" />
-        <activity android:name=".hotels"></activity>
+        <activity android:name=".hotels" />
         <activity android:name=".users" />
         <activity android:name=".home1" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+
+
+        <activity android:name=".ImagesActivity" />
+        <activity android:name=".Login" />
+        <activity android:name=".Register" />
+        <activity android:name=".Travel_Package" />
+        <activity android:name=".Traveller_Details" />
+        <activity android:name=".Add_Travel_Package" />
     </application>
 
 </manifest>

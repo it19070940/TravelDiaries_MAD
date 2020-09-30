@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mLoginBtn;
+
     ProgressBar progressBar;
     FirebaseAuth fAuth;
     @Override
@@ -64,10 +65,17 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(MainActivity.this, "Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 });
             }
         });
+
+
     }
+
+
+
+
 }

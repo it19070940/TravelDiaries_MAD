@@ -13,8 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".home2"></activity>
         <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".addhotel" />
         <activity android:name=".adddata" />
@@ -24,24 +29,15 @@
         <activity android:name=".home1" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity" />
-
-
         <activity android:name=".ImagesActivity" />
         <activity android:name=".Login" />
         <activity android:name=".Register" />
         <activity android:name=".Travel_Package" />
         <activity android:name=".Traveller_Details" />
-        <activity android:name=".Add_Travel_Package" />
-
-        <!--IT19036076-->
-        <activity android:name=".hotelMenu"/>
+        <activity android:name=".Add_Travel_Package" /> <!-- IT19036076 -->
+        <activity android:name=".hotelMenu" />
         <activity android:name=".testAdd" />
-        <activity android:name=".AdminHotelActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <activity android:name=".AdminHotelActivity"></activity>
     </application>
 
 </manifest>

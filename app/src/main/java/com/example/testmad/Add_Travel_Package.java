@@ -108,7 +108,7 @@ public class Add_Travel_Package extends AppCompatActivity {
 
 
 
-                mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Package");
+                mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Package1");
 
 
                 {

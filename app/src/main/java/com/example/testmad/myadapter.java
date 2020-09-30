@@ -19,29 +19,29 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class myadapter extends FirebaseRecyclerAdapter<ProductsModel, myadapter.myviewholder> {
-    public myadapter(@NonNull FirebaseRecyclerOptions<ProductsModel> options) {
+public class myadapter extends FirebaseRecyclerAdapter<Reg, myadapter.myviewholder> {
+    public myadapter(@NonNull FirebaseRecyclerOptions<Reg> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull final myviewholder holder, final int position, @NonNull ProductsModel model) {
-        holder.Name.setText(model.getName());
-        holder.Email.setText(model.getEmail());
-        holder.mobile.setText(model.getMobile());
-        Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
+    protected void onBindViewHolder(@NonNull final myviewholder holder, final int position, @NonNull Reg model) {
+        holder.name.setText(model.getName());
+        holder.email.setText(model.getEmail());
+        holder.mobileNo.setText(model.getMobile());
+        //Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
 
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.name.getContext());
                 builder.setTitle("Delete panel");
                 builder.setMessage("Are you sure?");
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("users").child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("Registration").child(getRef(position).getKey()).removeValue();
 
                     }
                 });
@@ -69,15 +69,15 @@ public class myadapter extends FirebaseRecyclerAdapter<ProductsModel, myadapter.
     }
 
     class myviewholder extends RecyclerView.ViewHolder{
-        CircleImageView img;
-        TextView Name, Email, mobile;
+        //CircleImageView img;
+        TextView name, email, mobileNo;
         Button btnDelete;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            img = (CircleImageView) itemView.findViewById(R.id.img1);
-            Name = (TextView)itemView.findViewById(R.id.nametext);
-            Email= (TextView)itemView.findViewById(R.id.coursetext);
-            mobile = (TextView)itemView.findViewById(R.id.emailtext);
+            //img = (CircleImageView) itemView.findViewById(R.id.img1);
+            name = (TextView)itemView.findViewById(R.id.nametext);
+            email= (TextView)itemView.findViewById(R.id.coursetext);
+            mobileNo = (TextView)itemView.findViewById(R.id.emailtext);
 
             btnDelete = itemView.findViewById(R.id.btnDelete);
 

@@ -41,6 +41,17 @@
         android:layout_marginStart="0dp"
         android:layout_marginBottom="-2dp" />
 
+    <ImageView
+        android:id="@+id/fadd"
+        android:layout_width="68dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/recview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginBottom="29dp"
+        app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
 
 
 </RelativeLayout>

@@ -1,5 +1,7 @@
 package com.example.testmad;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,24 +12,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Register extends AppCompatActivity {
+public class addUser extends AppCompatActivity {
 
     EditText name, email, mobileNo, country,password,cPassword;
     Button mRegistration;
-    TextView login;
     DatabaseReference dbRef;
     Reg std;
 
-    private CircleImageView Profile_Image;
-    private static final int PICK_IMAGE = 1;
-    Uri imageUri;
+    //private CircleImageView Profile_Image;
+    //private static final int PICK_IMAGE = 1;
+    //Uri imageUri;
 
     private void clearControls(){
         name.setText("");
@@ -41,10 +40,10 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_add_user);
 
 
-        Profile_Image = (CircleImageView) findViewById(R.id.Profile_Image);
+        /*Profile_Image = (CircleImageView) findViewById(R.id.Profile_Image);
         Profile_Image.setOnClickListener(new View.OnClickListener() {
 
 
@@ -58,7 +57,7 @@ public class Register extends AppCompatActivity {
             }
 
 
-        });
+        });*/
 
 
         name = findViewById(R.id.name);
@@ -68,7 +67,7 @@ public class Register extends AppCompatActivity {
         password = findViewById(R.id.password);
         cPassword = findViewById(R.id.password2);
         mRegistration = findViewById(R.id.createBtn);
-        login = findViewById(R.id.lBtn);
+        //login = findViewById(R.id.lBtn);
 
         std = new Reg();
 
@@ -105,7 +104,7 @@ public class Register extends AppCompatActivity {
                         clearControls();
 
 
-                        Intent i = new Intent(Register.this, Login.class);
+                        Intent i = new Intent(addUser.this, users.class);
                         startActivity(i);
                     }
 
@@ -116,12 +115,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
-            }
-        });
+
 
 
 
@@ -129,4 +123,3 @@ public class Register extends AppCompatActivity {
 
     }
 }
-

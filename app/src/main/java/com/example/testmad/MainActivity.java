@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mLoginBtn;
-
     ProgressBar progressBar;
     FirebaseAuth fAuth;
     @Override

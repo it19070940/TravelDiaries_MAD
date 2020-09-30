@@ -108,7 +108,7 @@ public class Add_Travel_Package extends AppCompatActivity {
 
 
 
-                mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Package1");
+                mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Package");
 
 
                 {
@@ -162,7 +162,7 @@ public class Add_Travel_Package extends AppCompatActivity {
 
                                                         mDatabaseRef.push().setValue(std);
 
-                                                        mDatabaseRef.child("std1").setValue(std);
+                                                       // mDatabaseRef.child("std1").setValue(std);
                                                         Toast.makeText(getApplicationContext(), "Data saved successfully", Toast.LENGTH_SHORT).show();
                                                         clearControls();
 

@@ -28,7 +28,7 @@ public class myadapter2 extends FirebaseRecyclerAdapter<Pack, myadapter2.myviewh
     @Override
     protected void onBindViewHolder(@NonNull final myviewholder holder, final int position, @NonNull Pack model) {
         holder.tPackage.setText(model.gettPackage());
-        Glide.with(holder.img.getContext()).load(model.getImageUrl()).into(holder.img);
+       Glide.with(holder.img.getContext()).load(model.getImageUrl()).into(holder.img);
 
         holder.Delete.setOnClickListener(new View.OnClickListener() {
             @Override

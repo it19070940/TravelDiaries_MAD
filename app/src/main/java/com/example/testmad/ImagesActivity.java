@@ -56,7 +56,6 @@ public class ImagesActivity extends AppCompatActivity  {
             //mDBListenr =
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
                 mUploads.clear();
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Pack upload = postSnapshot.getValue(Pack.class);

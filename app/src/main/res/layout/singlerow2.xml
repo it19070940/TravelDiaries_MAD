@@ -21,19 +21,17 @@
             app:civ_border_width="1dp"
             app:civ_border_color="#FF000000"/>
 
+
         <TextView
             android:id="@+id/promoCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="27dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="23dp"
             android:layout_toRightOf="@+id/img2"
             android:fontFamily="@font/roboto"
             android:text="This is demo name" />
-
-
-
 
         <ImageView
             android:id="@+id/Delete"

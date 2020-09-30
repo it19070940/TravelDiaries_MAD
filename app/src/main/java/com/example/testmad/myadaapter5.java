@@ -120,7 +120,7 @@ public class myadaapter5 extends FirebaseRecyclerAdapter<hotelsModel, myadaapter
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow7, parent, false);
         return new myviewholder(view);
     }
 

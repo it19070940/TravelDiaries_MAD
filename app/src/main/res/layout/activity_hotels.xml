@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".hotels">
+    tools:context= ".AdminHotelActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -24,11 +24,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="165dp"
+        android:layout_marginStart="182dp"
         android:layout_marginTop="115dp"
-        android:layout_marginEnd="125dp"
-        android:text="Hotels"
+        android:layout_marginEnd="108dp"
         android:fontFamily="@font/roboto"
+        android:text="Hotels"
         android:textColor="@android:color/white"
         android:textSize="24sp" />
 
@@ -36,10 +36,12 @@
         android:id="@+id/recview"
         android:layout_width="match_parent"
         android:layout_height="498dp"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="-2dp" />
+        android:layout_marginTop="126dp"
+        android:layout_marginBottom="24dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fadd"

@@ -1,5 +1,6 @@
 package com.example.testmad;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -77,6 +78,9 @@ public class Traveller_Details extends AppCompatActivity {
                         dbRef.child("std1").setValue(std);
                         Toast.makeText(getApplicationContext(), "Data saved successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
+
+                        Intent i = new Intent(Traveller_Details.this, hotelMenu.class);
+                        startActivity(i);
                     }
 
 

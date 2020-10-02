@@ -1,8 +1,11 @@
 package com.example.testmad;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -15,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.orhanobut.dialogplus.OnClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +30,8 @@ public class ImagesActivity extends AppCompatActivity  {
     private RecyclerView mRecyclerView;
     private ImageAdaptor mAdapter;
     private ProgressBar mProgressCircle;
+    ImageView fb;
+
 
     //private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
@@ -36,6 +42,8 @@ public class ImagesActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_images);
+
+
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -72,6 +80,15 @@ public class ImagesActivity extends AppCompatActivity  {
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
         });
+
+        fb= (ImageView) findViewById(R.id.add);
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Traveller_Details.class));
+            }
+        });
+
     }
 
    /* @Override
@@ -105,4 +122,5 @@ public class ImagesActivity extends AppCompatActivity  {
         mDatabaseRef.removeEventListener(mDBListenr);
 
     }*/
+
 }

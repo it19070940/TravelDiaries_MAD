@@ -1,9 +1,11 @@
 package com.example.testmad;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -50,10 +52,14 @@ public  class ImageAdaptor extends RecyclerView.Adapter<ImageAdaptor.ImageViewHo
     public class ImageViewHolder extends RecyclerView.ViewHolder  {
         public TextView textViewName;
         public ImageView imageView;
+        public Button btnAdd;
         public ImageViewHolder(View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.text_view_name);
             imageView = itemView.findViewById(R.id.image_view_upload);
+            btnAdd = itemView.findViewById(R.id.add);
+
+
 
             //implements View.OnClickListener, View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener
 

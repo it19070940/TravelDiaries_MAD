@@ -34,7 +34,7 @@ public class promos extends AppCompatActivity {
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), adddata.class));
+                startActivity(new Intent(getApplicationContext(), Add_Travel_Package.class));
             }
         });
     }

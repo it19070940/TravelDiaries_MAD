@@ -13,13 +13,13 @@
         android:padding="15sp">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img2"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@mipmap/ic_launcher"
             android:layout_centerVertical="true"
-            android:id="@+id/img2"
-            app:civ_border_width="1dp"
-            app:civ_border_color="#FF000000"/>
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp" />
 
 
         <TextView
@@ -50,6 +50,20 @@
             android:layout_marginTop="25dp"
             android:layout_toRightOf="@+id/img2"
             android:text="This is details" />-->
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="84dp"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="201dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_toEndOf="@+id/img2"
+            android:background="@color/oceanBlue"
+            android:text="View"
+            android:textColor="@android:color/white" />
 
 
 

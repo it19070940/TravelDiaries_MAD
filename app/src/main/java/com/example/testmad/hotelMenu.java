@@ -17,7 +17,7 @@ public class hotelMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_menu);
 
-        recview = (RecyclerView) findViewById(R.id.recview);
+        recview = (RecyclerView) findViewById(R.id.recView);
         recview.setLayoutManager(new
                 LinearLayoutManager(this));
 

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">testMad</string>
+    <string name="invalid_name">Please Enter Valid Name</string>
+    <string name="invalid_df">Please Enter Valid Destination</string>
+    <string name="invalid_dt">Please Enter Valid Destination</string>
+    <string name="invalid_daf">"Please Enter Valid Date "</string>
+    <string name="invalid_dat">"Please Enter Valid Date "</string>
+    <string name="invalid_tr">Please Enter Valid Type Of Travel</string>
+    <string name="invalid_th">Please Enter Valid Type of Hotel</string>
+    <string name="invalid_nop">Please Enter Number Of Peopl</string>
+    <string name="invalid_bud">Please Enter Budget</string>
 </resources>

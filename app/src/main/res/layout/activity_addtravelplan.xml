@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#ffffff"
+    tools:context=".addtravelplan">
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txttravelid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Travel ID"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/txtdatefrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date From"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/txtdateto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date To"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/txtdestifrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Destination From"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/txtdestito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Destination To"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/txttypeoftravel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type Of Travel"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txttypeofhotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type Of Hotel"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtnoofpeople"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Number Of People"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/txtbudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Budget"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="169dp"
+        android:layout_height="36dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/button1"
+        android:gravity="center_horizontal"
+        android:text="ADD PLAN"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nbackbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="#000"
+        android:src="@drawable/ic_action_back"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/logo_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

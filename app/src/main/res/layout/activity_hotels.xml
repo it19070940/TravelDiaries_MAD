@@ -27,7 +27,7 @@
         android:layout_marginStart="182dp"
         android:layout_marginTop="115dp"
         android:layout_marginEnd="108dp"
-        android:fontFamily="@font/roboto"
+        android:fontFamily="@font/vidaloka"
         android:text="Hotels"
         android:textColor="@android:color/white"
         android:textSize="24sp" />

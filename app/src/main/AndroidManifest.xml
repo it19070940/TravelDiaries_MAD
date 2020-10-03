@@ -13,16 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Addplan">
+        <activity android:name=".Addplan"></activity>
+        <activity android:name=".addUser" />
+        <activity android:name=".home2" />
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addUser" />
-        <activity android:name=".home2" />
-        <activity android:name=".splash"></activity>
         <activity android:name=".addhotel" />
         <activity android:name=".adddata" />
         <activity android:name=".logout" />

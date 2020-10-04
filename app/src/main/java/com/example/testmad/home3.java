@@ -31,7 +31,7 @@ public class home3 extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.c1:
-                i = new Intent(this, Travel_Package.class);
+                i = new Intent(this, ImagesActivity.class);
                 startActivity(i);
                 break;
             case R.id.c2:

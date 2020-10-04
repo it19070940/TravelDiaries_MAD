@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email =mEmail.getText().toString().trim();
+                String email = mEmail.getText().toString().trim();
                 String password = Password.getText().toString().trim();
 
                 if(TextUtils.isEmpty((email))){
@@ -62,15 +62,15 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(Login.this,"Logged in Succesfully",Toast.LENGTH_SHORT).show();;
+                            Toast.makeText(Login.this,"Logged in Succesfully",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),ImagesActivity.class));
                         }
                         else{
-                            Toast.makeText(Login.this,"ERROR !"+ Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();;
+                            Toast.makeText(Login.this,"ERROR !"+ Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
 
-                            Intent i = new Intent(Login.this, ImagesActivity.class);
-                            startActivity(i);
+                            //Intent i = new Intent(Login.this, ImagesActivity.class);
+                            //startActivity(i);
                         }
                     }
                 });

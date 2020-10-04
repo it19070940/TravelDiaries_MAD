@@ -31,7 +31,7 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/img2"
-            android:text="This is demo name" />
+            android:text="This is  name" />
 
         <TextView
             android:id="@+id/rate"
@@ -41,7 +41,7 @@
             android:layout_marginLeft="27dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/img2"
-            android:text="This is email" />
+            android:text="This is rate" />
         <!--<TextView
             android:id="@+id/details"
             android:layout_width="wrap_content"

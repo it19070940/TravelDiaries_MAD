@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
@@ -41,6 +42,7 @@
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/img2"
             android:text="This is email" />
+
         <!--<TextView
             android:id="@+id/details"
             android:layout_width="wrap_content"
@@ -64,12 +66,6 @@
             android:background="@color/oceanBlue"
             android:text="View"
             android:textColor="@android:color/white" />
-
-
-
-
-
-
 
 
     </RelativeLayout>

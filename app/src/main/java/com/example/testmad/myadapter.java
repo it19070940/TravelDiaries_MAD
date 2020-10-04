@@ -71,7 +71,7 @@ public class myadapter extends FirebaseRecyclerAdapter<Reg, myadapter.myviewhold
     class myviewholder extends RecyclerView.ViewHolder{
         //CircleImageView img;
         TextView name, email, mobileNo;
-        Button btnDelete;
+        ImageView btnDelete;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             //img = (CircleImageView) itemView.findViewById(R.id.img1);
@@ -79,7 +79,7 @@ public class myadapter extends FirebaseRecyclerAdapter<Reg, myadapter.myviewhold
             email= (TextView)itemView.findViewById(R.id.coursetext);
             mobileNo = (TextView)itemView.findViewById(R.id.emailtext);
 
-            btnDelete = itemView.findViewById(R.id.btnDelete);
+            btnDelete = (ImageView) itemView.findViewById(R.id.btnDelete);
 
         }
     }

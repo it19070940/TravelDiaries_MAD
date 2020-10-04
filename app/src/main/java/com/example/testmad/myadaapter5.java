@@ -91,7 +91,7 @@ public class myadaapter5 extends FirebaseRecyclerAdapter<hotelsModel, myadaapter
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
-                builder.setTitle("Delete panel");
+                builder.setTitle("Delete Hotel");
                 builder.setMessage("Are you sure?");
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {

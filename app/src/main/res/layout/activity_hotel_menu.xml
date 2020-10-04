@@ -42,8 +42,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recView"
-        android:layout_width="414dp"
-        android:layout_height="586dp"
+        android:layout_width="430dp"
+        android:layout_height="614dp"
         android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"

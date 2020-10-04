@@ -9,7 +9,7 @@ public class Pack {
     private String imageUrl;
     private String key;
 
-    private String mEditTextFileName;
+    //private String mEditTextFileName;
 
     public Pack() {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home1">
+    tools:context=".home3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
             android:id="@+id/c1">
-            
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -30,16 +30,16 @@
                     android:src="@drawable/logo_mad"
                     android:padding="5sp"/>
 
-                    <TextView
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:text="Users"
-                        android:fontFamily="@font/roboto"
-                        android:layout_gravity="center"
-                        android:textSize="20sp"
-                        android:textAlignment="center"
-                        android:paddingTop="30sp"
-                        android:layout_marginRight="60dp"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:text="Promotion packages"
+                    android:fontFamily="@font/roboto"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:paddingTop="30sp"
+                    android:layout_marginRight="60dp"/>
             </LinearLayout>
 
 
@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:text="Promos"
+                    android:text="Hotels"
                     android:fontFamily="@font/roboto"
                     android:layout_gravity="center"
                     android:textSize="20sp"
@@ -102,7 +102,7 @@
                 <TextView
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:text="Hotels"
+                    android:text="Travel plans"
                     android:fontFamily="@font/roboto"
                     android:layout_gravity="center"
                     android:textSize="20sp"

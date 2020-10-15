@@ -17,7 +17,13 @@
         <activity android:name=".Addplan" />
         <activity android:name=".addUser" />
         <activity android:name=".home2" />
-        <activity android:name=".splash"></activity>
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".addhotel" />
         <activity android:name=".adddata" />
         <activity android:name=".logout" />
@@ -36,11 +42,7 @@
         <activity android:name=".AdminHotelActivity" />
         <activity android:name=".viewplan" />
         <activity android:name=".addtravelplan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".travelplanmenu"></activity>
 

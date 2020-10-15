@@ -27,7 +27,7 @@ public class myadapter2 extends FirebaseRecyclerAdapter<Pack, myadapter2.myviewh
 
     @Override
     protected void onBindViewHolder(@NonNull final myviewholder holder, final int position, @NonNull Pack model) {
-        holder.tPackage.setText(model.gettPackage());
+        holder.tName.setText(model.gettName());
        Glide.with(holder.img.getContext()).load(model.getKey()).into(holder.img);
 
         holder.Delete.setOnClickListener(new View.OnClickListener() {
@@ -63,13 +63,13 @@ public class myadapter2 extends FirebaseRecyclerAdapter<Pack, myadapter2.myviewh
 
     class myviewholder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView tPackage;
+        TextView tName;
         ImageView Delete;
 
         public myviewholder(@NonNull View itemView){
             super(itemView);
             img=(CircleImageView)itemView.findViewById(R.id.img2);
-            tPackage = (TextView)itemView.findViewById(R.id.promoCode);
+            tName = (TextView)itemView.findViewById(R.id.promoCode);
             Delete = (ImageView) itemView.findViewById(R.id.Delete);
         }
     }
